@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="custom.js"></script>
+    <title>Document</title>
+</head>
+<style>
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgba(233, 233, 233, 0.582); 
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+
+}
+
+/* Container around content */
+.containerTimeline {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.containerTimeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(0, 0, 0);
+  border: 4px solid #01d4f0;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(0, 0, 0);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent black;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(0, 0, 0) transparent transparent;
+
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.contentTimeLine {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .containerTimeline {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .containerTimeline::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+
+/* Client Section Css */
+.section-padding{
+padding:60px 0;
+/* box-shadow: 0 2px 15px rgb(131, 181, 255); */
+}
+.brand-carousel {
+background: rgb(255, 255, 255);
+margin-top: 15%;
+margin-bottom: 15%;
+}
+.owl-dots {
+text-align: center;
+margin-top: 4%;
+}
+.owl-dot {
+display: inline-block;
+height: 15px !important;
+width: 15px !important;
+background-color: #878787 !important;
+opacity: 0.8;
+border-radius: 50%;
+margin: 0 5px;
+}
+.owl-dot.active {
+background-color: #000 !important;
+}
+.headerImageAbout > img {
+  margin-top: 5%;
+  width: 100%;
+}
+.TimeLineSectionMargin{
+  margin-top: 5%;
+}
+
+.text-main-text {
+    width: 100%;
+    margin-top: 15em;
+}
+   </style>
+<body>
+    
+        <nav>
+            <div class="navbar">
+                <i class="fas fa-bars"></i>
+                <div class="logo"><a href="#">Security</a></div>
+                <div class="nav-links">
+                    <div class="sidebar-logo">
+                        <span class="logo-name">Security</span>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <ul class="menus">
+                        <li><a class="line" href="index.html">home</a></li>
+                        <li><a class="line" href="about.html">about</a></li>
+                        <li><a class="line" href="services.html">services</a>
+                            <ul class="sub-menu">
+                                <li><a class="pnt" href="#">Drop-down</a></li>
+                                <li><a class="pnt" href="#">Drop-down</a></li>
+                                <li><a class="pnt" href="#">Drop-down</a></li>
+                                <li><a class="pnt" href="#">Drop-down</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="line" href="contact.html">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <!-- <div class="headerImageAbout" >      <img src="img/AboutUsHeader1.jpg"> </div> -->
+       <div class="TimeLineSectionMargin">
+        <div class="text-main-text">
+          <h1 style="color: black;" class="headings">COMPANY TIMELINE</h1>
+          <div class="subhead">
+            Ensure your safety with a range of our services for individuals and businesses.
+          </div>
+      </div>
+      <div class="timeline">
+        <div class="containerTimeline left">
+          <div class="contentTimeLine">
+            <h2>2017</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div>
+        <div class="containerTimeline right">
+          <div class="contentTimeLine">
+            <h2>2016</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div>
+        <div class="containerTimeline left">
+          <div class="contentTimeLine">
+            <h2>2015</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div>
+        <div class="containerTimeline right">
+          <div class="contentTimeLine">
+            <h2>2012</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div>
+        <div class="containerTimeline left">
+          <div class="contentTimeLine">
+            <h2>2011</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div>
+        <div class="containerTimeline right">
+          <div class="contentTimeLine">
+            <h2>2007</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Our Mission -->
+      <!-- <section class="testimonials1">
+        <div class="text-main-text">
+            <h1 style="color: black;" class="headings">OUR MISSION</h1>
+            <div class="subhead">
+              There is no mission we can fail. We provide with the highest security level.
+            </div>
+        </div>
+
+        <div class="container8">
+            <div class="container8-content">
+                
+                <p>
+                  Our mission is to provide protection and security to our clients through a bespoke 
+                  service tailored to their specific needs, ultimately the safety and security of the 
+                  client’s staff, premises, assets and the general public is our highest priority.
+
+
+                </p>
+                <div class="author">
+                    <p>– Alicia McKanzey</p>
+                </div>
+
+            </div>
+
+            <div class="container-image">
+
+                <img src="img/testiEdit.webp" alt="">
+            </div>
+
+
+
+        </div>
+        </div>
+    </section> -->
+    <div class="text-main-text">
+        <h1 class="headings">Our Mission</h1>
+        <div class="subhead">
+            Our services are best in town and premium
+        </div>
+    </div>
+    <div class="wrapper-flex">
+        <div class="container-services">
+          <div class='banner-img'></div><script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+          <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/yqbqexfk.json"
+    trigger="hover"
+    colors="primary:#00d4ff,secondary:#333434"
+    stroke="64"
+    style="width:170px;height:220px">
+          
+          <img src='img/serv-1.png' alt='profile image' class="profile-img"></lord-icon>
+          <h1 class="name">Private Security</h1>
+          <p class="description">Our bodyguards are strong men and professionals who served in military forces.</p>
+        
+            <a style="margin-bottom: 20px;" class="btnb" href="#">Sign Up <i class="fas fa-long-arrow-alt-right"></i></a>
+        
+       
+        </div>
+    
+        <div class="container-services">
+            <div class='banner-img'></div>
+            <lord-icon
+    src="https://cdn.lordicon.com/yqbqexfk.json"
+    trigger="hover"
+    colors="primary:#00d4ff,secondary:#333434"
+    stroke="64"
+    style="width:170px;height:220px">
+          
+            <img src='img/serv-2.png' alt='profile image' class="profile-img"></lord-icon>
+            <h1 class="name">Guard House</h1>
+            <p class="description">Settle a guard house behind your facility and we'll monitor the activity around the house.</p>
+            
+                <a style="margin-bottom: 20px;" class="btnb" href="#">Sign Up <i class="fas fa-long-arrow-alt-right"></i></a>
+            
+            
+          </div>
+          <div class="container-services">
+            <div class='banner-img'></div>
+            <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            style="width:170px;height:220px">
+                  
+            <img src='img/serv-3.png' alt='profile image' class="profile-img"></lord-icon>
+            <h1 class="name">24/7 Surveillance</h1>
+            <p class="description">our strong men and professionals  will do 24/7 security surveillance of your house with focus .</p>
+            
+                <a style="margin-bottom: 20px;" class="btnb" href="#">Sign Up <i class="fas fa-long-arrow-alt-right"></i></a>
+            
+            
+          </div>
+        
+        </div>
+    <!-- <section class="testimonials1">
+      <div class="text-main-text">
+          <h1 style="color: black;" class="headings">OUR VISSION</h1>
+          <div class="subhead">
+              Stay Upto date with our latest news
+          </div>
+      </div>
+
+      <div class="container8">
+          <div class="container8-content">
+             
+              <p>
+                We are committed to the ongoing improvement of the services we provide to our clients. 
+                By investing in and developing our most important assets, our staff, 
+                we aim to achieve all our goals and exceed our clients’ expectations. 
+                Through our commitment to high standards it is our vision to earn the trust of 
+                our clients by delivering the best quality security services within the UK.
+              </p>
+              <div class="author">
+                  <p>– Alicia McKanzey</p>
+              </div>
+
+          </div>
+
+          <div class="container-image">
+
+              <img src="img/testiEdit.webp" alt="">
+          </div>
+          </div>
+          </section> -->
+          <div class="text-main-text">
+            <h1 style="color: black;" class="headings">Our Vision</h1>
+            <div class="subhead">
+                Read honest testimonials of our clients who got secured thanks to our services.
+            </div>
+        </div>
+    
+        <div class="container8">
+            <div class="container8-content">
+                <div class="testimonial-heading">
+                    What Our Clients Say
+                </div>
+                <p class="testimonial-text">
+                    When I saw how these guys prepare themselves to any operation, I realized that it was it! I must hire them! I was
+                    scared. Now I am feeling safe because there is always the strongmen team with me and my folks.
+                </p>
+                <div class="author">
+                    <p class="testimonial-author">– Alicia McKanzey</p>
+                </div>
+    
+            </div>
+    
+            <div class="container10-image">
+    
+                <img src="img/testiEdit.png" alt="">
+            </div>
+    
+    
+    
+        </div>
+          <!-- Client section -->
+          <div class="text-main-text">
+            <h1 style="color: black;  margin-top: 0;" class="headings">OUR CLIENTS</h1>
+            <div class="subhead">
+               Our clients who got secured thanks to our services.
+            </div>
+        </div>
+          <div class="brand-carousel section-padding owl-carousel">
+            <div class="single-logo">
+              <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
+            </div>
+          <div class="single-logo">
+              <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" alt="">
+            </div>
+          <div class="single-logo">
+              <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+            </div>
+          <div class="single-logo">
+              <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" alt="">
+            </div>
+          <div class="single-logo">
+              <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
+            </div>
+          <div class="single-logo">
+              <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+            </div>
+          </div>
+
+          <footer>
+            <div class="footer-content">
+                <h3>Security</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2020 Security. designed by <span>Security</span></p>
+            </div>
+        </footer>
+            <script src="script.js"></script>
+<script>
+  $('.brand-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  autoplay:true,
+  responsive:{
+    0:{
+      items:1
+    },
+    600:{
+      items:3
+    },
+    1000:{
+      items:5
+    }
+  }
+}) 
+
+</script>          
+</body>
+</html>
