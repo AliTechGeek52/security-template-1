@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="skin.css"> 
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -158,8 +162,7 @@ padding:60px 0;
 }
 .brand-carousel {
 background: rgb(255, 255, 255);
-margin-top: 15%;
-margin-bottom: 15%;
+
 }
 .owl-dots {
 text-align: center;
@@ -187,7 +190,8 @@ background-color: #000 !important;
 
 .text-main-text {
     width: 100%;
-    margin-top: 15em;
+    margin-top: 10em;
+    margin-bottom: 10em;
 }
 .head-img {
   background-image: url(img/head2.jpg);
@@ -223,7 +227,7 @@ background-color: #000 !important;
 
 .services{
 	width:100%;
-	height: 100vh;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -323,40 +327,71 @@ text-align: center;
 	}
 	
 }
-
+.owl-carousel .owl-item img {
+    display: block;
+    width: 55%;
+}
    </style>
 <body>
     
-  <nav>
-    <div class="navbar">
+  <header>
+    <nav>
+      <div class="navbar">
         <i class="fas fa-bars"></i>
-        <div class="logo"><a href="#">Security</a></div>
+        <div class="logo"><a href="index.html">Security</a></div>
         <div class="nav-links">
-            <div class="sidebar-logo">
-                <span class="logo-name">Security</span>
-                <i class="fas fa-times"></i>
-            </div>
-            <ul class="menus">
-                <li><a class="line" href="index.html">home</a></li>
-                <li><a class="line" href="about.html">about</a>
-                <ul class="sub-menu">
-                    <li><a class="pnt" href="index.html#ourteam">Our Team</a></li>
-                </ul>
-                
-                </li>
-                <li><a class="line" href="services.html">services</a>
-                    <ul class="sub-menu">
-                        <li><a class="pnt" href="#">Private Security</a></li>
-                        <li><a class="pnt" href="#">Guard House</a></li>
-                        <li><a class="pnt" href="#">24/7 Surveillance</a></li>
-                    </ul>
-                </li>
-
-                <li><a class="line" href="contact.html">contact us</a></li>
-            </ul>
+          <div class="sidebar-logo">
+            <span class="logo-name">Security</span>
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="menus">
+            <li><a class="line" href="index.html">home</a></li>
+            <li><a class="line" href="about.html">about</a>
+              <ul class="sub-menu">
+                <li><a class="pnt" href="#OurVision">Our Vision</a></li>
+                <li><a class="pnt" href="#OurExperience">Our Experience</a></li>
+                <li><a class="pnt" href="#OurAdvantages">Our Policies</a></li>
+                <li><a class="pnt" href="#OurPricing">Our Prices</a></li>
+                <li><a class="pnt" href="#">Our Accreditations</a></li>
+                <li><a class="pnt" href="#OurTeam">Our Team</a></li>
+                <li><a class="pnt" href="#OurPartners">Our Partners</a></li>
+  
+              </ul>
+  
+            </li>
+            <li><a class="line" href="#">services</a>
+              <ul class="sub-menu">
+                <li><a class="pnt" href="static.html">Static Security</a></li>
+                <li><a class="pnt" href="mobile-patrolling.html">Mobile Patrolling</a></li>
+                <li><a class="pnt" href="cctv-monitoring.html">CCTV Monitoring</a></li>
+                <li><a class="pnt" href="lockandunlock.html">Lock & unlock</a></li>
+                <li><a class="pnt" href="vacant-unit-check.html">Vacant Unit Checks</a></li>
+                <li><a class="pnt" href="technology-product.html">Technology Product</a></li>
+                <li><a class="pnt" href="manned-guarding.html">Manned Guarding</a></li>
+                <li><a class="pnt" href="support-and-management.html">Support & Management</a></li>
+                <li><a class="pnt" href="event-security.html">Event Security</a></li>
+              </ul>
+            </li>
+  
+            <li><a class="line" href="contact.html">contact us</a></li>
+            <li><a  href="#"><lord-icon
+              src="https://cdn.lordicon.com/msoeawqm.json"
+              trigger="hover"
+              colors="primary:#121331,secondary:#00d4ff"
+              style="width:40px;height:40px">
+          </lord-icon></a></li>
+            <li><a href="#"><lord-icon
+              src="https://cdn.lordicon.com/slkvcfos.json"
+              trigger="hover"
+              colors="primary:#121331,secondary:#00d4ff"
+              style="width:50px;height:50px">
+          </lord-icon></a></li>
+            <li><a class="contact-btn" href="#"><span><i class="fas fa-phone-alt"></i></span> 020 7946 0020</a></li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
+  </header>
 
 <section class="head-img">
   <div class="contentserv">
@@ -364,11 +399,11 @@ text-align: center;
   
   </div>
       </section>
-      <section class="services-sec">
+      <section  class="services-sec">
         <div class="container grid-contact">
             <div class="slide-in services-text">
                 <h1>
-                  Unique Features Reliability & Commitment
+          OUR EXPERIENCE
                 </h1>
                 <p>
                   Our security agency is committed to helping every client who is at risk. We owe our lives to save the one of a client. We know everything about security. Our staff has valuable experience, doing this job for almost twenty years.
@@ -377,13 +412,13 @@ text-align: center;
                 </p>
         
             </div>
-            <div class="slide-in service-img">
+            <div   class="slide-in service-img">
                 <img src="img/services11.jpg" alt="">
             </div>
         
         </div>
         </section>
-        <section class="services">
+        <section id="OurVision" class="services">
            <div class="service-item-container">	
               <div class="service-item  fade-in" style="
               height: 405px;
@@ -410,7 +445,7 @@ text-align: center;
                  <div class="item">
                   <img src="img/3.svg" alt="">
                  </div>
-                 <h1>Our Vision</h1>
+                 <h1 >Our Vision</h1>
                  <p>We stand against violence, but if necessary we use our force.</p>
                  <a style="margin-bottom: 20px;" class="btnb" href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
               </div>
@@ -420,7 +455,7 @@ text-align: center;
        <!-- <div class="headerImageAbout" > 
               <img src="img/AboutUsHeader1.jpg"> </div> -->
               
-       <div class="TimeLineSectionMargin">
+       <div id="OurExperience" class="TimeLineSectionMargin">
         <div class="text-main-text">
           <h1 style="color: black;" class="headings">COMPANY TIMELINE</h1>
           <div class="subhead">
@@ -467,10 +502,10 @@ text-align: center;
       </div>
     </div>
 
-    <div class="text-main-text">
-        <h1 class="headings">Our Mission</h1>
+    <div id="OurAdvantages" class="text-main-text">
+        <h1 class="headings">Our Advantages</h1>
         <div class="subhead">
-            Our services are best in town and premium
+          We are able to guarantee your safety 24/7 no matter who you are and whatever you do.
         </div>
     </div>
     <div class="wrapper-flex">
@@ -566,11 +601,142 @@ text-align: center;
             </div>
         </div> -->
         
+         <!-- prizing table -->
+      <h1 id="OurPricing" class="headings">Our Pricing Table</h1>
+      <div class="subhead">
+        <p>
+          Our prices can let you secure your business or life with no large
+          expenses.
+        </p>
+      </div>
+      <div class="container-1">
+        <div class="box1">
+          <header class="heading-price">
+            <h2 class="title1">Starter</h2>
+            <p class="subtitle1">For small business</p>
+          </header>
+          <p class="price1">
+            <span class="nb1">$29</span>
+            <small class="year1">/yr</small>
+          </p>
+
+          <ul>
+            <li>02 CCTV Cameras</li>
+            <li>01 Security Guard</li>
+            <li>No Physical Protections</li>
+            <li>No Security With Dogs</li>
+            <li>No Change on Complain</li>
+          </ul>
+          <div class="btn-center">
+            <a class="btna" href=""
+              >Sign Up <i class="fas fa-long-arrow-alt-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="box2">
+          <header class="heading-price">
+            <h2 class="title2">Professional</h2>
+            <p class="subtitle2">For small business</p>
+          </header>
+          <p class="price2">
+            <span class="nb2">$59</span>
+            <small class="year2">/yr</small>
+          </p>
+
+          <ul class="price-text">
+            <li>20 CCTV Cameras</li>
+            <li>08 Security Guard</li>
+            <li>Yes Physical Protections</li>
+            <li>04 Security With Dogs</li>
+            <li>Yes Change on Complain</li>
+          </ul>
+
+          <div class="btn-center">
+            <a class="btna2" href=""
+              >Sign Up <i class="fas fa-long-arrow-alt-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="box1">
+          <header class="heading-price">
+            <h2 class="title1">Advance</h2>
+            <p class="subtitle1">For small business</p>
+          </header>
+          <p class="price1">
+            <span class="nb1">$29</span>
+            <small class="year1">/yr</small>
+          </p>
+
+          <ul>
+            <li>10 CCTV Cameras</li>
+            <li>02 Security Guard</li>
+            <li>No Physical Protections</li>
+            <li>01 Security With Dogs</li>
+            <li>No Change on Complain</li>
+          </ul>
+
+          <div class="btn-center">
+            <a class="btna" href=""
+              >Sign Up <i class="fas fa-long-arrow-alt-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- prizing table end -->
+
+        <!-- Our Team sec start -->
+        <div id="OurTeam" class="cards-contain">
+          <h1 class="headings">Our Team</h1>
+          <div class="subhead">
+            <p>Team That you can Rely on</p>
+          </div>
+          <div class="wrapper2">
+            <div class="blog2">
+              <div class="single-blog">
+                <div class="blog-img">
+                  <img src="img/ourteam.jpg" alt="" />
+                  <!-- <a href="">category</a> -->
+                </div>
+  
+                <div class="blog-content">
+                  <h4>Bianca B.Rooney</h4>
+                  <p>Head Of Security Team</p>
+                  
+                </div>
+              </div>
+              <div class="single-blog">
+                <div class="blog-img">
+                  <img src="img/ourteam2.jpg" alt="" />
+                  <!-- <a href="">category</a> -->
+                </div>
+  
+                <div class="blog-content">
+                  <h4>ADALBERTO</h4>
+                  <p>Senior Guard</p>
+                  
+                </div>
+              </div>
+              <div class="single-blog">
+                <div class="blog-img">
+                  <img src="img/ourteam3.jpg" alt="" />
+                 
+                </div>
+  
+                <div class="blog-content">
+                  <h4>AMBROSE</h4>
+                  <p>Private Investigator</p>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Our Team end -->
 
         
           <!-- Client section -->
-          <div class="text-main-text">
-            <h1 style="color: black;  margin-top: 0;" class="headings">OUR CLIENTS</h1>
+          <div id="OurPartners" class="text-main-text">
+            <h1 style="color: black;  margin-top: 0;" class="headings">OUR PARTNERS</h1>
             <div class="subhead">
                Our clients who got secured thanks to our services.
             </div>
@@ -598,27 +764,78 @@ text-align: center;
 
 
 
-          <svg class="footsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#00d4ff" fill-opacity="1"
-              d="M0,96L120,80C240,64,480,32,720,32C960,32,1200,64,1320,80L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-            </path>
-          </svg>
           <footer>
-            <div class="footer-content">
-                <h3>Security</h3>
-                <p>To prevent tampering and unauthorized entry into the premises by our engineers developed a burglar alarm system in the house.</p>
-                <ul class="socials">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <!-- <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li> -->
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <!-- <li><a href="#"><i class="fab fa-linkedin"></i></a></li> -->
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy;2020 Security. designed by <span>Citrix Consultancy</span></p>
-            </div>
-        </footer>
+            <div class="footer">
+         
+      
+              <div class="row-foot">
+                
+                
+               
+               <div class="column-foot">
+                  <div class="span"></div>
+                  <h2 id="hh1"><b>Avantage</b></h2>
+                  <h1 id="hh2" >Headquarters</h1>
+                  <p class="main-para">Visualize quality intellectual capital without superior collaboration and idea sharing installed base portals.</p>
+                  <p><i class="fas fa-map-marker-alt i1 "></i> Address :4010 Feeney Way</p>
+                
+                    <p> <i class="fas fa-phone-alt i1 "></i>020 7946 0020  </p>
+                  
+                    <p><i class="fas fa-envelope i1"></i>critrixconsultancy@gmail.com</p>
+                
+                </div>
+                <div class="column-foot" >
+                  <div class="span"></div>
+                  <h2 id="hh1"><b>Our Locations</b></h2>
+                  <h1 id="hh2" >Where to find us?</h1>
+                 <img src="https://i.ibb.co/L0HJLvC/img-footer-map.png" height="200px" alt="img-footer-map" border="0">
+               
+                </div>
+                
+                <div class="column-foot" style="background-color:transparent">
+                  <div class="col"> 
+                    <p><i class="fas fa-map-marker-alt i1 "></i> San Diego: 619 270 8578  </p>
+                 
+                      <p><i class="fas fa-map-marker-alt i1 "></i> Ontario: 613 285 5534</p> 
+                      <p><i class="fas fa-map-marker-alt i1 "></i>London: 020 7946 0020 </p>
+                     
+                     
+                    
+                      
+                    </div>
+                  
+             
+                
+                  </div>
+                 
+             <div>
+              <div class="column-foot">
+                  <div class="span"></div>
+                  <h2 id="hh1"><b>Get in touch</b></h2>
+                  <h1 id="hh2" >Avantage Social links</h1>
+                  <p class="main-para">Taking seamless key performance indicators offline to maximise the long tail</p>
+                  <p>
+                    <i class="fab fa-facebook i "></i>
+                    <i class="fab fa-twitter-square i "></i>
+                    <i class="fab fa-pinterest i "></i>
+                    <i class="fab fa-linkedin i"></i>
+                   </p>    
+                </div>
+              </div>
+              
+             
+           
+          </div>
+          
+          
+          <div class="bottom-foot">
+          <div class="copyright">
+            <p>Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved.</p>
+          </div>
+          
+          
+          </div>
+          </footer>
             <script src="script.js"></script>
 <script>
   $('.brand-carousel').owlCarousel({
